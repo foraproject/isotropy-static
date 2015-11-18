@@ -1,8 +1,11 @@
 {
     "author": "Jeswin Kumar <jeswinpk@agilehead.com>",
     "name": "isotropy-static",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "static koa application at a given path",
+    "scripts": {
+        "test": "mocha dist/test/test.js"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/jeswin/isotropy-static.git"

@@ -14,7 +14,7 @@ export default function(root, opts) {
             await next();
         }
 
-        if (context.method != 'HEAD' && context.method != 'GET') return;
+        if (context.method !== 'HEAD' && context.method !== 'GET') return;
 
         // response is already handled
         if (context.body != null || context.status != 404) return;

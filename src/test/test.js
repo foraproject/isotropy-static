@@ -38,6 +38,44 @@ describe("Isotropy static", () => {
     });
 
 
+    it(`Must fetch index.html if filename is not provided`, () => {
+        const app = new koa();
+        app.use(isotropyStatic(__dirname + "/icles"));
+
+        const promise = new Promise((resolve, reject) => {
+            app.listen(function(err) {
+                if (err) {
+                    reject(err);
+                }
+                makeRequest(this.address().port, "localhost", "", "GET", {}, resolve, reject);
+            });
+        });
+
+        return promise.then((result) => {
+            result.should.equal("hello, index\n")
+        });
+    });
+
+
+    it(`Must fetch specified index file if provided`, () => {
+        const app = new koa();
+        app.use(isotropyStatic(__dirname + "/icles", { index: "alt-index.html" }));
+
+        const promise = new Promise((resolve, reject) => {
+            app.listen(function(err) {
+                if (err) {
+                    reject(err);
+                }
+                makeRequest(this.address().port, "localhost", "", "GET", {}, resolve, reject);
+            });
+        });
+
+        return promise.then((result) => {
+            result.should.equal("hello, alt\n")
+        });
+    });
+
+
     it(`Must fetch file in a sub-directory`, () => {
         const app = new koa();
         app.use(isotropyStatic(__dirname + "/icles"));

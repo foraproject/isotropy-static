@@ -9,6 +9,8 @@ import path from "path";
 export default function(root, opts) {
     opts = opts || {};
     opts.root = path.resolve(root);
+    if (opts.index !== false) opts.index = opts.index || 'index.html';
+
     return async function(context, next) {
         if (opts.defer) {
             await next();

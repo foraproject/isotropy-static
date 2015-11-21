@@ -7,7 +7,7 @@
 import send from 'koa-send';
 import path from "path";
 
-export default function(root: string, opts: OptionsType) : MiddlewareType {
+export default function(root: string, opts: SendOptionsType) : MiddlewareType {
     opts = opts || {};
     opts.root = path.resolve(root);
     if (opts.index !== false) opts.index = opts.index || 'index.html';

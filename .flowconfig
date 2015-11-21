@@ -1,0 +1,13 @@
+[include]
+
+[libs]
+type-definitions/koa-send.js
+type-definitions/isotropy-static-types.js
+
+[options]
+
+[ignore]
+.*/dist/.*
+.*/coverage/.*
+.*/scripts/.*
+.*/node_modules/.*

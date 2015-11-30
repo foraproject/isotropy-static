@@ -6,7 +6,7 @@ import isotropyStatic from "../isotropy-static";
 
 describe("Isotropy static", () => {
 
-    const makeRequest = (port, host, path, method, headers, cb, onErrorCb) => {
+    const makeRequest = (host, port, path, method, headers, cb, onErrorCb) => {
         const options = { host, port, path, method, headers };
 
         let result = "";
@@ -28,7 +28,7 @@ describe("Isotropy static", () => {
                 if (err) {
                     reject(err);
                 }
-                makeRequest(this.address().port, "localhost", "/hello.txt", "GET", {}, resolve, reject);
+                makeRequest("localhost", this.address().port, "/hello.txt", "GET", {}, resolve, reject);
             });
         });
 
@@ -47,7 +47,7 @@ describe("Isotropy static", () => {
                 if (err) {
                     reject(err);
                 }
-                makeRequest(this.address().port, "localhost", "", "GET", {}, resolve, reject);
+                makeRequest("localhost", this.address().port, "", "GET", {}, resolve, reject);
             });
         });
 
@@ -66,7 +66,7 @@ describe("Isotropy static", () => {
                 if (err) {
                     reject(err);
                 }
-                makeRequest(this.address().port, "localhost", "", "GET", {}, resolve, reject);
+                makeRequest("localhost", this.address().port, "", "GET", {}, resolve, reject);
             });
         });
 
@@ -85,7 +85,7 @@ describe("Isotropy static", () => {
                 if (err) {
                     reject(err);
                 }
-                makeRequest(this.address().port, "localhost", "/inner/world.txt", "GET", {}, resolve, reject);
+                makeRequest("localhost", this.address().port, "/inner/world.txt", "GET", {}, resolve, reject);
             });
         });
 

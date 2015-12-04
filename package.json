@@ -1,7 +1,7 @@
 {
     "author": "Jeswin Kumar <jeswinpk@agilehead.com>",
     "name": "isotropy-static",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "Static file handler for koa apps",
     "scripts": {
         "test": "mocha dist/test/test.js"

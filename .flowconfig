@@ -1,8 +1,7 @@
 [include]
 
 [libs]
-type-definitions/koa-send.js
-type-definitions/isotropy-static-types.js
+interfaces/
 
 [options]
 

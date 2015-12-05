@@ -1,8 +1,8 @@
 {
     "author": "Jeswin Kumar <jeswinpk@agilehead.com>",
     "name": "isotropy-static",
-    "version": "0.1.5",
-    "description": "Static file handler for koa apps",
+    "version": "0.2.0",
+    "description": "Promises or async-await based static file handler for Koa",
     "scripts": {
         "test": "mocha dist/test/test.js"
     },

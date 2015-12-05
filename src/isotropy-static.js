@@ -4,10 +4,12 @@
     https://github.com/koajs/static
 */
 
-import send from 'koa-send';
+import type { KoaContextType, KoaNextType, KoaMiddlewareType } from 'koa';
+import type { KoaSendOptionsType } from "koa-send";
+import send from "koa-send";
 import path from "path";
 
-export default function(root: string, opts: SendOptionsType) : MiddlewareType {
+export default function(root: string, opts: KoaSendOptionsType) : KoaMiddlewareType {
     opts = opts || {};
     opts.root = path.resolve(root);
     if (opts.index !== false) opts.index = opts.index || 'index.html';

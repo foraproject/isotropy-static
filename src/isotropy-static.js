@@ -4,8 +4,8 @@
     https://github.com/koajs/static
 */
 
-import type { KoaContextType, KoaNextType, KoaMiddlewareType } from 'koa';
-import type { KoaSendOptionsType } from "koa-send";
+import type { KoaType, KoaMiddlewareType } from "./flow/koa-types";
+import type { KoaSendOptionsType } from "./flow/koa-send-types";
 import send from "koa-send";
 import path from "path";
 

@@ -9,8 +9,7 @@ import type { KoaSendOptionsType } from "./flow/koa-send-types";
 import send from "koa-send";
 import path from "path";
 
-export default function(root: string, opts: KoaSendOptionsType) : KoaMiddlewareType {
-    opts = opts || {};
+export default function(root: string, opts?: KoaSendOptionsType = {}) : KoaMiddlewareType {
     opts.root = path.resolve(root);
     if (opts.index !== false) opts.index = opts.index || 'index.html';
 

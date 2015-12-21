@@ -1,4 +1,5 @@
 declare module "koa-send" {
+
     declare type KoaType = {
         middleware: Array<KoaMiddlewareType>
     }

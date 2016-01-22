@@ -1,31 +1,31 @@
 {
-    "author": "Jeswin Kumar <jeswinpk@agilehead.com>",
-    "name": "isotropy-static",
-    "version": "0.2.6",
-    "description": "Promises or async-await based static file handler for Koa",
-    "scripts": {
-        "test": "mocha dist/test/test.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/jeswin/isotropy-static.git"
-    },
-    "main": "dist/isotropy-static",
-    "dependencies": {
-        "koa-send": "*"
-    },
-    "devDependencies": {
-        "koa": ">=2.0.0-alpha.3",
-        "babel-polyfill": "*",
-        "babel-preset-es2015": "*",
-        "babel-preset-react": "*",
-        "babel-preset-stage-2": "*",
-        "mocha": "*",
-        "should": "*"
-    },
-    "keywords": [
-        "koa",
-        "static"
-    ],
-    "license" : "MIT"
+  "author": "Jeswin Kumar <jeswinpk@agilehead.com>",
+  "name": "isotropy-static",
+  "version": "0.2.8",
+  "description": "Promises or async-await based static file handler for Koa",
+  "scripts": {
+    "test": "mocha dist/test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeswin/isotropy-static.git"
+  },
+  "main": "dist/isotropy-static",
+  "dependencies": {
+    "koa-send": "*"
+  },
+  "devDependencies": {
+    "koa": ">=2.0.0-alpha.3",
+    "babel-polyfill": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "babel-preset-stage-2": "*",
+    "mocha": "*",
+    "should": "*"
+  },
+  "keywords": [
+    "koa",
+    "static"
+  ],
+  "license" : "MIT"
 }
